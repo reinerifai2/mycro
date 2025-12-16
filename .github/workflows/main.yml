@@ -15,8 +15,10 @@ jobs:
 
       - name: Run simple test
         run: echo "GitHub Action is working ✅"
-run: |
-  if [ -f wrongfile.txt ]; then
-    echo "File missing or wrong!"
-    exit 1
-  fi
+
+      - name: Check for wrongfile.txt
+        run: |
+          if [ ! -f wrongfile.txt ]; then
+            echo "File missing or wrong!"
+            exit 1
+          fi

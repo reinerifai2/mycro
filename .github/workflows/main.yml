@@ -16,9 +16,9 @@ jobs:
       - name: Run simple test
         run: echo "GitHub Action is working ✅"
 
-      - name: Check for wrongfile.txt
+      - name: Check for Untitled-1.html
         run: |
-          if [ ! -f wrongfile.txt ]; then
+          if [ ! -f Untitled-1.html ]; then
             echo "File missing or wrong!"
             exit 1
           fi
